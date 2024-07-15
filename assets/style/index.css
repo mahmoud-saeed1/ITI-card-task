@@ -64,7 +64,7 @@ img {
 .card {
   background-color: #ffffff;
   width: 384px;
-  height: 522px;
+  min-height: 522px;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -109,6 +109,7 @@ img {
 }
 
 .card__footer {
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
   column-gap: 12px;
