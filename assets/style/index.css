@@ -1,4 +1,10 @@
-/* ~~~~~~~$ CSS Reset $~~~~~~~ */
+/*~~~~~~~$ Global Variables $~~~~~~~*/
+:root {
+  --primary-color: #f4d04e;
+  --border-radius: 1rem;
+}
+
+/*~~~~~~~$ Reset CSS $~~~~~~~*/
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +13,7 @@
 
 html,
 body {
-  background-color: yellow;
+  background-color: var(--primary-color);
   height: 100%;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -35,13 +41,6 @@ select {
   outline: none;
 }
 
-/* ~~~~~~~$ Global styling $~~~~~~~ */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
 img {
   width: 100%;
   height: 100%;
@@ -49,9 +48,77 @@ img {
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .container {
-    max-width: 100%;
-    padding: 1.5rem;
-  }
+/*~~~~~~~$ Global Styling $~~~~~~~*/
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__image img {
+  border-radius: var(--border-radius);
+}
+
+/*~~~~~~~$ Card Styling $~~~~~~~*/
+.card {
+  background-color: #ffffff;
+  width: 384px;
+  height: 522px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  border-radius: var(--border-radius);
+  border: 1px solid black;
+  box-shadow: 12px 12px 1px rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.card a {
+  background-color: var(--primary-color);
+  display: block;
+  width: -moz-fit-content; /* For Firefox */
+  width: -webkit-fit-content; /* For older versions of Chrome and Safari */
+  width: fit-content;
+  padding: 4px 12px;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.card__body h3 {
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+}
+.card__body h4 {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+.card__body p {
+  font-size: 1.1rem;
+  color: #7f7f7f;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+.avatar__image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.card__footer p {
+  font-weight: bold;
 }
