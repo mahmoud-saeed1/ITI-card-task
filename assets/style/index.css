@@ -77,10 +77,8 @@ img {
 
 .card a {
   background-color: var(--primary-color);
-  display: block;
-  width: -moz-fit-content; /* For Firefox */
-  width: -webkit-fit-content; /* For older versions of Chrome and Safari */
-  width: fit-content;
+  display: inline-block;
+  align-self: flex-start;
   padding: 4px 12px;
   color: black;
   font-weight: bold;
